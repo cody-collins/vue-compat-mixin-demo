@@ -4,11 +4,12 @@ import HelloWorld from './components/HelloWorld.vue'
 
 describe('App.vue', () => {
   it('renders props.msg when passed', () => {
-    const msg = 'new message'
+    const msg = 'Hi'
     const wrapper = shallowMount(App, {
       propsData: { msg }
     })
+    expect(wrapper.props('msg')).toMatch('Hi')
     const child = wrapper.findComponent(HelloWorld)
-    expect(child.props('msg')).toMatch(msg)
+    expect(child.props('msg')).toMatch('Hi. How are you')
   })
 })

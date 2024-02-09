@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld v-bind:msg="msg"/>
+    <HelloWorld :msg="msgExtended"/>
   </div>
 </template>
 
@@ -11,9 +11,14 @@ import HelloWorldMixin from './components/HelloWorldMixin'
 
 export default {
   name: 'App',
-   mixins: [HelloWorldMixin],
+  mixins: [HelloWorldMixin],
   components: {
     HelloWorld
+  },
+  computed: {
+    msgExtended () {
+      return `${this.msg}. How are you?`
+    }
   }
 }
 </script>
