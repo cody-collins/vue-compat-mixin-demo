@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "vite dev",
+    "test:debug": "node --inspect node_modules/jest/bin/jest"
   },
   "dependencies": {
     "core-js": "^3.8.3",
