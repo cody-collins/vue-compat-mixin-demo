@@ -6,12 +6,6 @@
 import HelloWorldMixin from './HelloWorldMixin'
 export default {
   name: 'HelloWorld',
-  mixins: [HelloWorldMixin],
-  props: {
-    msg: {
-      type: String,
-      required: true
-    }
-  }
+  mixins: [HelloWorldMixin]
 }
 </script>

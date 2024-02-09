@@ -1,11 +1,11 @@
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, mount } from '@vue/test-utils'
 import App from './App.vue'
 import HelloWorld from './components/HelloWorld.vue'
 
 describe('App.vue', () => {
   it('renders props.msg when passed', () => {
     const msg = 'Hi'
-    const wrapper = shallowMount(App, {
+    const wrapper = mount(App, {
       propsData: { msg }
     })
     expect(wrapper.props('msg')).toMatch('Hi')
