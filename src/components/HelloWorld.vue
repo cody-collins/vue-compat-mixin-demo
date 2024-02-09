@@ -32,11 +32,10 @@
 </template>
 
 <script>
+import HelloWorldMixin from './HelloWorldMixin'
 export default {
   name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+  mixins: [HelloWorldMixin]
 }
 </script>
 
